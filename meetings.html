@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+
+        <h1>Meeting list</h1>
+        
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>DESCRIPTION</th>
+                <th>DATE</th>
+            </tr>
+            <tr th:each="meeting : ${context.get('meetings')}">
+                <td th:text="${meeting.key}"></td>
+                <td th:text="${meeting.value.description}"></td>
+                <td th:text="${meeting.value.date}"></td>
+            </tr>
+        </table>
+
+
+    </body>
+
+</html>
