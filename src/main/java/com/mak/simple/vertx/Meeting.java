@@ -1,3 +1,6 @@
+
+
+
 package com.mak.simple.vertx;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -37,6 +40,8 @@ public class Meeting {
         this.description = description;
         this.date = date;
     }
+
+//komentarz
 
     public Meeting() {
         this.id = COUNTER.getAndIncrement();
